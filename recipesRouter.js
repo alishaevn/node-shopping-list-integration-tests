@@ -60,7 +60,8 @@ router.put('/:id', jsonParser, (req, res) => {
     if (!(field in req.body)) {
       const message = `Missing \`${field}\` in request body`
       console.error(message);
-      return res.status(400).send(message);
+      // return res.status(400).send(message);
+      res.status(200).json(updatedItem);
     }
   }
   if (req.params.id !== req.body.id) {
