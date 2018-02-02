@@ -18,7 +18,7 @@ describe('Recipes', function () {
   });
 
   after(function () {
-    return closeServer;
+    return closeServer();
   });
 
   /*****************************
